@@ -3,6 +3,15 @@
 install:
 	poetry install
 
+package-install:
+	python3 -m pip install --user dist/*.whl
+
+test:
+	poetry run pytest --cov=page_analyzer
+
+test-coverage:
+	poetry run pytest --cov=page_analyzer --cov-report xml
+
 dev:
 	poetry run flask --app page_analyzer:app run
 
