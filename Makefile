@@ -9,6 +9,9 @@ package-install:
 test:
 	poetry run pytest --cov=page_analyzer
 
+build:
+	./build.sh
+
 test-coverage:
 	poetry run pytest --cov=page_analyzer --cov-report xml
 
